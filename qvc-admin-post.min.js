@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){window.vc&&qTranslateConfig.qtx.addLanguageSwitchAfterListener(function(){window.vc&&vc.app&&"shown"==vc.app.status&&vc.app.show()})});
