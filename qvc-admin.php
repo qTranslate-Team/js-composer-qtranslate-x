@@ -1,12 +1,13 @@
 <?php
 if(!defined('ABSPATH'))exit;
 
-add_filter('qtranslate_load_admin_page_config','qvc_add_admin_page_config');
+add_filter('qtranslate_load_admin_page_config','qvc_add_admin_page_config');//obsolete
+//add_filter('i18n_admin_config','qvc_add_admin_page_config');
 function qvc_add_admin_page_config($page_configs)
 {
 	{
 	$page_config = array();
-	$page_config['pages'] = array( 'post.php' => '' );
+	$page_config['pages'] = array( 'post.php' => '', 'post-new.php' => '' );
 
 	/**
 	 * List of scripts to be executed before "new qTranslateX" in 'qtranslate-x/admin/js/common.js'.
@@ -22,7 +23,8 @@ function qvc_add_admin_page_config($page_configs)
 	 */
 	$page_config['js-exec'] = array();
 	$js = &$page_config['js-exec']; // shorthand
-	$js[] = array( 'handle' =>'qvc-js-exec', 'src' => dirname(plugin_basename(__FILE__)).'/qvc-admin-post.min.js', 'ver' => QVC_VERSION );
+	$dir = qtranxf_dir_from_wp_content(__FILE__);
+	$js[] = array( 'handle' =>'qvc-js-exec', 'src' => $dir.'/qvc-admin-post.min.js', 'ver' => QVC_VERSION );
 
 	$page_configs[] = $page_config;
 	}

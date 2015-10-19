@@ -3,7 +3,7 @@
  * Plugin Name: WPBakery Visual Composer & qTranslate-X
  * Plugin URI: https://wordpress.org/plugins/js-composer-qtranslate-x
  * Description: Enables multilingual framework for plugin "WPBakery Visual Composer".
- * Version: 1.0
+ * Version: 1.1
  * Author: qTranslate Team
  * Author URI: http://qtranslatexteam.wordpress.com/about
  * License: GPL2
@@ -12,7 +12,7 @@
  */
 if(!defined('ABSPATH'))exit;
 
-define('QVC_VERSION','1.0');
+define('QVC_VERSION','1.1');
 
 function qvc_init_language($url_info)
 {
